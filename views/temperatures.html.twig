@@ -8,19 +8,24 @@
 
 <h1>Temperatures</h1>
 
-{%  if temperatures is empty %}
-No temperatures
-{% else %}
-<ul>
-    {% for temperature in temperatures %}
-    <li>
-        {{ temperature.Id }}
-        <b>{{ temperature.Temperature }}</b>
-        <i>{{ temperature.CaptureTime }}</i>
-    </li>
-    {% endfor %}
-</ul>
+<table>
 
-{% endif %}
+    {%  if temperatures is empty %}
+    No temperatures
+    {% else %}
+    <ul>
+        {% for temperature in temperatures %}
+        <li>
+
+
+            <b>{{ temperature.Temperature }}</b>
+            <i>{{ temperature.CaptureTime }}</i>
+
+            </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+</table>
 </body>
 </html>
